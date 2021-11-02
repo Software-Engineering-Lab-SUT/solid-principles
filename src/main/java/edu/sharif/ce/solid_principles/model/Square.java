@@ -3,24 +3,30 @@ package edu.sharif.ce.solid_principles.model;
 import edu.sharif.ce.solid_principles.AreaComputable;
 
 public class Square implements AreaComputable {
+    private int side;
+
     public Square(int side) throws IllegalArgumentException {
-        throw new UnsupportedOperationException();
+        checkSide(side);
+        this.side = side;
     }
 
     public void setSide(int side) {
-        throw new UnsupportedOperationException();
+        checkSide(side);
+        this.side = side;
     }
 
     public int getSide() {
-        throw new UnsupportedOperationException();
+        return side;
     }
 
     private static void checkSide(int side) {
-        throw new UnsupportedOperationException();
+        if (side < 0) {
+            throw new IllegalArgumentException("Side cannot be negative.");
+        }
     }
 
     @Override
     public int computeArea() {
-        throw new UnsupportedOperationException();
+        return side * side;
     }
 }
