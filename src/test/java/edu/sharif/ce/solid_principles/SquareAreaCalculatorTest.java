@@ -1,5 +1,6 @@
 package edu.sharif.ce.solid_principles;
 
+import edu.sharif.ce.solid_principles.model.Square;
 import org.junit.Assert;
 import org.junit.Test;
 
